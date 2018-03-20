@@ -26,7 +26,11 @@ function currentLine(line) {
   } else {
     var array = [];
     for (let i = 0; i < line.length; i++) {
-      array.push(`${i+1}. ${line[i]}`);
+      if ( i === 0) {
+        array.push(`${i+1}. ${line[i]}`);
+      } else {
+        array.push(` ${i+1}. ${line[i]}`);
+      }
     }
     return `The line is currently: ${array}`;
   }
